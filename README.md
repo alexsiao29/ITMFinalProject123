@@ -16,9 +16,11 @@ Models Data:
 
 User View
 
-  Home Navigation Page
+Home Navigation Page
   
-    Select canteen you’d like to (1) occupy a table in, or (2) check table availability in Sub-Canteen Page
+    Select canteen you’d like to (1) occupy a table in, or (2) check table availability
+    
+Sub-Canteen Page
 	
       1.Check Menu Tab
 	  
