@@ -1,0 +1,44 @@
+.caf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.caf a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.caf a:hover,
+.caf a:active {
+  transform: scale(1.1);
+  background-color: #3D56B2;
+  color: white;
+}
+
+.caf img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.caf h3 {
+  margin: 0.25rem 0;
+}
+
+.caf time {
+  color: #666666;
+  margin: 0.25rem;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.caf:hover time,
+.caf:active time {
+  color: white;
+}

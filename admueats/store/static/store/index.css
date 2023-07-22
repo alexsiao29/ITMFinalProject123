@@ -1,0 +1,82 @@
+#main-navigation {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main-navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+#main-navigation a:hover,
+#main-navigation a:active {
+  color: #75C2F6;
+}
+
+#main-navigation h1 a:hover,
+#main-navigation h1 a:active {
+  color: white;
+}
+
+#welcome {
+  background-color:#1D5D9B;
+  padding: 6rem 12%;
+}
+
+#welcome header {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem auto;
+}
+
+#welcome h2 {
+  font-size: 3.5rem;
+  margin: -1rem 0 -6rem -3rem;
+  color: #e4e4e4;
+}
+
+#cafs-list {
+  background-color: #75C2F6;
+  padding: 2rem;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+
+#cafs-list h2 {
+  text-align: center;
+}
+
+#cafs-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#cafs-list li {
+  flex: 1;
+}
+
+#about {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #F4D160;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+}
+
+#about p {
+  font-size: 1.5rem;
+  color: #353535;
+}

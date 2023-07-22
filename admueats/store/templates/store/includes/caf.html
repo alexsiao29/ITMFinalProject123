@@ -1,0 +1,13 @@
+{% load static %}
+
+<li>
+  <article class="caf">
+    <a href="{% url "caf-menu-page" caf.slug %}">
+      <img src="{% static "store/images/"|add:caf.image %}" alt={{ caf.title }}
+      />
+      <div class="product__content">
+        <h3>{{ caf.title }}</h3>
+      </div>
+    </a>
+  </article>
+</li>

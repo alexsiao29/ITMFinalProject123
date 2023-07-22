@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 
+All My Products
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "store/caf.css" %}" />
+  <link rel="stylesheet" href="{% static "store/all_cafs.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="all-cafs">
+  <h2>Ateneo Canteens</h2>
+
+  <ul>
+    {% for caf in all_cafs %}
+      {% include "store/includes/caf.html" %}
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

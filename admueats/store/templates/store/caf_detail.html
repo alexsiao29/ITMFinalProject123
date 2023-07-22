@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block title %} 
+{{ caf.title }}
+{% endblock %} 
+
+{% block css_files %} 
+<link rel="stylesheet" href="{% static "store/caf_detail.css" %}" /> 
+{% endblock %} 
+
+{% block content %}
+<section id="summary">
+  <h2>{{ caf.title }}</h2>
+  <article>
+    <img src="{% static "store/images/"|add:caf.image %}" alt={{ caf.title }} />
+    </div>
+  </article>
+</section>
+
+<section id="tabs">
+    <h2><a href="">Menu</a></h2>
+      <nav>
+        <a href="{% url "caf-tables-page" caf.slug %}">Tables</a>
+      </nav>
+</section>
+
+<main id="menu">
+  <img src="{% static "store/images/"|add:caf.menu %}" alt={{ caf.title }} />
+</main>
+{% endblock %}

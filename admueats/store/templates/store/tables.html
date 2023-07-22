@@ -1,0 +1,67 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block title %} 
+{{ caf.title }}
+{% endblock %} 
+
+{% block css_files %} 
+<link rel="stylesheet" href="{% static "store/tables.css" %}" /> 
+{% endblock %} 
+
+{% block content %}
+<section id="summary">
+  <h2>{{ caf.title }}</h2>
+  <article>
+    <img src="{% static "store/images/"|add:caf.image %}" alt={{ caf.title }} />
+    </div>
+  </article>
+</section>
+
+<section id="tabs">
+    <h2><a href="{% url "caf-menu-page" caf.slug %}">Menu</a></h2>
+      <nav>
+        <a href="">Tables</a>
+      </nav>
+</section>
+
+<main id="tables">
+  <p>
+    <img src="{% static "store/images/"|add:caf.tables %}" alt={{ caf.title }} />
+    <div if="description"> {{ caf.description }}
+    </div></br></br>
+    <div class="forms"> 
+      <div id="availability">
+        <h2> {{ caf.title }} Table Availability</h2>
+        <p> These are tables available in {{ caf.title }}:</p>
+      </div>
+      <div id="occupancy">
+       <h2> {{ caf.title }} Table Occupancy Form</h2>
+        <form method='POST'>
+            {% csrf_token %}
+           <label for="table">Currently in: </label>
+           <select name="table">
+             <option selected disabled=true>--Select Table--</option>
+              <option>{{ caf.title }} Table 1</option>
+              <option>{{ caf.title }} Table 2</option>
+              <option>{{ caf.title }} Table 3</option>
+              <option>{{ caf.title }} Table 4</option>
+              <option>{{ caf.title }} Table 5</option>
+              <option>{{ caf.title }} Table 6</option>
+              <option>{{ caf.title }} Table 7</option>
+              <option>{{ caf.title }} Table 8</option>
+            </select> </br>
+            <label for="customer_email">Enter your E-mail: </label>
+          <input
+            id="customer_email"
+            type="text"
+            name="customer_email"
+            value="username@domain"/>
+          <input type="submit" value="Reserve">
+        </form>
+          <button>I Already Left</button>
+      </div>
+    </div>
+  </p>
+</main>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+ADMUeats
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "store/caf.css" %}" />
+  <link rel="stylesheet" href="{% static "store/index.css" %}" />
+{% endblock %}
+
+{% block content %}
+{% comment %} <header id="main-navigation">
+  <h1><a href="">ADMUeats</a></h1>
+  <nav>
+    <a href="">All Cafeterias</a>
+  </nav>
+</header> {% endcomment %}
+
+<section id="welcome">
+  <header>
+    <h2>Find an available table now.</h2>
+  </header>
+</section>
+
+<section id="cafs-list">
+  <h2>All Cafeterias</h2>
+
+  <ul>
+    {% for caf in cafs %}
+      {% include "store/includes/caf.html" %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>About ADMUeats</h2>
+  <p>
+    Easily find available tables around campus cafeterias!
+  </p>
+  <p>
+    Simply browse and enter your table number once you've occupied a spot. Happy eating <3
+  </p>
+</section>
+
+{% endblock %}
